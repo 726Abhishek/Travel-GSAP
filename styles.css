@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(33, 33, 33);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+.content {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* background: rgba(0, 0, 255, 0.137); */
+  pointer-events: all;
+}
+
+.checkpoint,
+.marker,
+#airplane,
+.roadMap {
+  position: absolute;
+}
+
+.roadMap {
+  top: 110.5px;
+  left: 132.5px;
+}
+
+#airplane {
+    top: 112.5px;
+    left: 100.5px;
+}
+
+.marker {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  scale: 0.5;
+
+  &.active {
+    opacity: 1;
+    scale: 2.5;
+  }
+
+  &.visited {
+    opacity: 1;
+    scale: 1;
+    path {
+      fill: #b5f827;
+    }
+  }
+
+  &.marker1 {
+    top: 118.5px;
+    left: 121.5px;
+  }
+  &.marker2 {
+    top: 100.7px;
+    left: 290.5px;
+  }
+  &.marker3 {
+    top: 135.5px;
+    right: 138.5px;
+  }
+  &.marker4 {
+    bottom: 104px;
+    right: 140px;
+  }
+  &.marker5 {
+    top: 157px;
+    right: 187px;
+  }
+  &.marker6 {
+    top: 160px;
+    right: 230px;
+  }
+  &.marker7 {
+    bottom: 106px;
+    left: 268px;
+  }
+  &.marker8 {
+    bottom: 62px;
+    left: 210px;
+  }
+}
+
+.checkpoint {
+  height: 40px;
+  width: 33px;
+  opacity: 0;
+  scale: 0.5;
+  transform: rotateY(45deg) translateY(-20px);
+  transition: 0.5s ease-in-out;
+
+  &.active {
+    opacity: 1;
+    scale: 1;
+    transform: rotateY(0deg) translateY(0px);
+    path:first-child {
+      stroke: #ff7a00;
+    }
+  }
+
+  &.visited {
+    opacity: 1;
+    scale: 1;
+    transform: rotateY(0deg) translateY(0px);
+    path:first-child {
+      stroke: #b5f827;
+    }
+  }
+
+  &.checkpoint1 {
+    top: 95.5px;
+    left: 118px;
+  }
+  &.checkpoint2 {
+    top: 76px;
+    left: 287.4px;
+  }
+  &.checkpoint3 {
+    top: 110.5px;
+    right: 131.5px;
+  }
+  &.checkpoint4 {
+    bottom: 108px;
+    right: 134px;
+  }
+  &.checkpoint5 {
+    top: 133px;
+    right: 180.5px;
+  }
+  &.checkpoint6 {
+    top: 136px;
+    right: 224px;
+  }
+  &.checkpoint7 {
+    bottom: 111px;
+    left: 264px;
+  }
+  &.checkpoint8 {
+    bottom: 66px;
+    left: 206.5px;
+  }
+}
